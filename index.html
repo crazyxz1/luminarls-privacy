@@ -1,68 +1,162 @@
-Política de Privacidade — Luminarls
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Política de Privacidade — Luminarls</title>
+  <meta name="description" content="Política de Privacidade do bot Luminarls para Discord." />
+  <link rel="icon" href="data:," />
+  <style>
+    :root{
+      --bg:#0b0f14; --card:#101820; --text:#e6eef5; --muted:#a8b3bd; --accent:#5eead4; --border:#233241;
+      --max: 940px;
+    }
+    @media (prefers-color-scheme: light){
+      :root{ --bg:#f7fbff; --card:#ffffff; --text:#0b1220; --muted:#4b5563; --accent:#0ea5e9; --border:#e5e7eb; }
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0; padding:0; background:var(--bg); color:var(--text); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;}
+    .wrap{max-width:var(--max); margin:48px auto; padding:0 20px;}
+    header{display:flex; gap:16px; align-items:center; justify-content:space-between; flex-wrap:wrap;}
+    h1{font-size:clamp(1.6rem, 2.5vw + 1rem, 2.4rem); margin:0 0 8px}
+    .badge{display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border:1px solid var(--border); border-radius:999px; color:var(--muted); font-weight:600;}
+    .badge .dot{width:8px; height:8px; border-radius:999px; background:var(--accent)}
+    .card{background:var(--card); border:1px solid var(--border); border-radius:16px; padding:20px; margin:16px 0;}
+    h2{font-size:1.25rem; margin:0 0 8px}
+    p{margin:8px 0}
+    ul{margin:8px 0 8px 20px}
+    li{margin:4px 0}
+    .muted{color:var(--muted)}
+    footer{margin-top:32px; padding-top:16px; border-top:1px dashed var(--border); color:var(--muted)}
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .grid{display:grid; gap:16px}
+    @media (min-width:768px){ .grid{grid-template-columns:1fr 1fr} }
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}
+    /* Print */
+    @media print{
+      :root{ --bg:#ffffff; --card:#ffffff; --text:#000000; --muted:#333; --border:#ccc; }
+      body{background:#fff;}
+      .wrap{margin:0;}
+      a{color:#000}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>Política de Privacidade — Luminarls</h1>
+        <div class="badge" aria-label="Última atualização">
+          <span class="dot" aria-hidden="true"></span>
+          <span>Última atualização: <time datetime="2025-08-19">19/08/2025</time></span>
+        </div>
+      </div>
+    </header>
 
-Última atualização: 19/08/2025
+    <section class="card" id="intro">
+      <h2>1. Introdução</h2>
+      <p>O <strong>Luminarls</strong> é um bot para Discord projetado para melhorar a experiência de comunidades, oferecendo funcionalidades como economia de Lucoins, exploração, sistema de empregos, tickets, AutoMod e criação de embeds.</p>
+      <p>Esta Política de Privacidade explica como coletamos, usamos e armazenamos os dados dos usuários.</p>
+    </section>
 
-1. Introdução
+    <section class="card" id="dados-coletados">
+      <h2>2. Dados coletados</h2>
+      <p>O Luminarls não coleta nem armazena o conteúdo das mensagens dos usuários fora do Discord. Ele coleta apenas dados necessários para o funcionamento dos recursos do bot, como:</p>
+      <div class="grid">
+        <div>
+          <h3>Economia e Ranking</h3>
+          <ul>
+            <li>Saldo de Lucoins, progresso em empregos e cooldowns de exploração.</li>
+            <li>Histórico de <span class="mono">daily</span> e apostas para funcionalidade interna.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Tickets</h3>
+          <ul>
+            <li>Logs de tickets, transcrições em <span class="mono">.txt</span> ou embeds no servidor.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Configurações do Bot</h3>
+          <ul>
+            <li>Preferências de tickets, embeds salvos, palavras bloqueadas no AutoMod.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Metadados</h3>
+          <ul>
+            <li>IDs de usuário, IDs de servidor/canal, datas e horários de interações com o bot.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-O Luminarls é um bot para Discord projetado para melhorar a experiência de comunidades, oferecendo funcionalidades como economia de Lucoins, exploração, sistema de empregos, tickets, AutoMod e criação de embeds.
+    <section class="card" id="armazenamento">
+      <h2>3. Armazenamento dos dados</h2>
+      <ul>
+        <li>Os dados são armazenados em <strong>SQLite</strong> local ou em <strong>MongoDB</strong> (quando aplicável).</li>
+        <li>Nenhum conteúdo de mensagens privadas é armazenado fora do Discord.</li>
+        <li>Dados são usados exclusivamente para:
+          <ul>
+            <li>Funcionalidades internas do bot.</li>
+            <li>Manutenção de ranking, economia e tickets.</li>
+            <li>Melhorar a experiência do usuário.</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
 
-Esta Política de Privacidade explica como coletamos, usamos e armazenamos os dados dos usuários.
+    <section class="card" id="compartilhamento">
+      <h2>4. Compartilhamento de dados</h2>
+      <ul>
+        <li>O Luminarls não compartilha dados pessoais ou conteúdo de mensagens com terceiros.</li>
+        <li>Logs ou transcrições de tickets ficam apenas no servidor onde o ticket foi criado.</li>
+      </ul>
+    </section>
 
-2. Dados coletados
+    <section class="card" id="controle">
+      <h2>5. Controle do usuário</h2>
+      <ul>
+        <li>Os usuários não podem desativar seletivamente o rastreamento de dados internos do bot, pois ele depende de interações com comandos, ranking e tickets.</li>
+        <li>Usuários podem:
+          <ul>
+            <li>Evitar interagir com o bot.</li>
+            <li>Configurar permissões de canal para limitar a atuação do bot.</li>
+            <li>Solicitar remoção de dados entrando em contato com o desenvolvedor.</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
 
-O Luminarls não coleta nem armazena o conteúdo das mensagens dos usuários fora do Discord.
-Ele coleta apenas dados necessários para o funcionamento dos recursos do bot, como:
+    <section class="card" id="seguranca">
+      <h2>6. Segurança</h2>
+      <ul>
+        <li>Os dados são armazenados com boas práticas de segurança.</li>
+        <li>Apenas o proprietário do bot e administradores autorizados têm acesso aos dados coletados.</li>
+      </ul>
+    </section>
 
-* Economia e Ranking
+    <section class="card" id="exclusao">
+      <h2>7. Exclusão de dados</h2>
+      <ul>
+        <li>Usuários podem solicitar que seus dados sejam removidos, enviando mensagem para o desenvolvedor do bot.</li>
+        <li>A exclusão inclui saldo, progresso, tickets e preferências, mas não inclui conteúdo de mensagens, que não é armazenado.</li>
+      </ul>
+    </section>
 
-  * Saldo de Lucoins, progresso em empregos e cooldowns de exploração.
-  * Histórico de daily e apostas para funcionalidade interna.
-* Tickets
+    <section class="card" id="contato">
+      <h2>8. Contato</h2>
+      <p>Para dúvidas sobre esta Política de Privacidade ou para solicitar exclusão de dados, entre em contato com:</p>
+      <ul>
+        <li>Email: <a href="mailto:crazyatendimento@gmail.com">crazyatendimento@gmail.com</a></li>
+        <li>Discord: <a href="https://discord.com/users/" rel="noreferrer noopener">crazyxz._</a></li>
+      </ul>
+    </section>
 
-  * Logs de tickets, transcrições em .txt ou embeds no servidor.
-* Configurações do Bot
-
-  * Preferências de tickets, embeds salvos, palavras bloqueadas no AutoMod.
-* Metadados
-
-  * IDs de usuário, IDs de servidor/canal, datas e horários de interações com o bot.
-
-3. Armazenamento dos dados
-
-* Os dados são armazenados em SQLite local ou em MongoDB (quando aplicável).
-* Nenhum conteúdo de mensagens privadas é armazenado fora do Discord.
-* Dados são usados exclusivamente para:
-
-  * Funcionalidades internas do bot.
-  * Manutenção de ranking, economia e tickets.
-  * Melhorar a experiência do usuário.
-
-4. Compartilhamento de dados
-
-* O Luminarls não compartilha dados pessoais ou conteúdo de mensagens com terceiros.
-* Logs ou transcrições de tickets ficam apenas no servidor onde o ticket foi criado.
-
-5. Controle do usuário
-
-* Os usuários não podem desativar seletivamente o rastreamento de dados internos do bot, pois ele depende de interações com comandos, ranking e tickets.
-* Usuários podem:
-
-  * Evitar interagir com o bot.
-  * Configurar permissões de canal para limitar a atuação do bot.
-  * Solicitar remoção de dados entrando em contato com o desenvolvedor.
-
-6. Segurança
-
-* Os dados são armazenados com boas práticas de segurança.
-* Apenas o proprietário do bot e administradores autorizados têm acesso aos dados coletados.
-
-7. Exclusão de dados
-
-* Usuários podem solicitar que seus dados sejam removidos, enviando mensagem para o desenvolvedor do bot.
-* A exclusão inclui saldo, progresso, tickets e preferências, mas não inclui conteúdo de mensagens, que não é armazenado.
-
-8. Contato
-
-Para dúvidas sobre esta Política de Privacidade ou para solicitar exclusão de dados, entre em contato com:
-Email: crazyatendimento@gmail.com
-Discord: crazyxz._
+    <footer>
+      <p class="muted">Este documento descreve a forma como o Luminarls trata os dados. Recomendamos revisar periodicamente para acompanhar possíveis alterações.</p>
+    </footer>
+  </div>
+</body>
+</html>
